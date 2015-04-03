@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS `#__test_category` (
+`id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+
+`category_name` VARCHAR(255)  NOT NULL ,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT COLLATE=utf8_general_ci;
+

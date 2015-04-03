@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_TEST_CONSTRUCT_FORM_LBL_CONSTRUCT_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="key" type="text"
+                
+            label="COM_TEST_CONSTRUCT_FORM_LBL_CONSTRUCT_KEY"
+            description="COM_TEST_CONSTRUCT_FORM_DESC_CONSTRUCT_KEY" 
+                
+                
+                 /> 
+
+ 
+		<field name="question" type="sql" label="Question" description="Вопросы для пользователя" query="SELECT id,question FROM `kkk_test_base` " key_field="id" value_field="question" multiple="true"  /> 
+
+       <field name="type_answer" type="radio"
+                
+            label="COM_TEST_CONSTRUCT_FORM_LBL_CONSTRUCT_TYPE_ANSWER"
+            description="COM_TEST_CONSTRUCT_FORM_DESC_CONSTRUCT_TYPE_ANSWER" 
+                 default="1" 
+                
+                
+            option_on="Yes"
+            option_off="Yes">
+                <option value="1">выбор ответа</option>
+                <option value="2">в одну строку</option>
+                <option value="3">свободный ответ</option>
+        </field> 
+
+       <field name="time_for_test" type="text" size="40" class="inputbox"
+                                                    
+            label="COM_TEST_CONSTRUCT_FORM_LBL_CONSTRUCT_TIME_FOR_TEST"
+            description="COM_TEST_CONSTRUCT_FORM_DESC_CONSTRUCT_TIME_FOR_TEST" 
+                                                     default="00:00:00" 
+                                                    
+                                                    
+                                                    filter="safehtml" /> 
+
+       <field name="test_for_user" type="user"
+                
+            label="COM_TEST_CONSTRUCT_FORM_LBL_CONSTRUCT_TEST_FOR_USER"
+            description="COM_TEST_CONSTRUCT_FORM_DESC_CONSTRUCT_TEST_FOR_USER" 
+                
+                
+                 />
+
+	</fieldset>
+
+</form>

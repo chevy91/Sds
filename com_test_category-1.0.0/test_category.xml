@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_test_category</name>
+    <creationDate>2015-04-03</creationDate>
+    <copyright>© 2015. Все права защищены.</copyright>
+    <license>GNU General Public License </license>
+    <author>mrsiter</author>
+    <authorEmail>padlo@ex.ua</authorEmail>
+    <authorUrl>http://mrsiter.com</authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>test_category.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_test_category.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_test_category.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_test_category/assets/images/s_com_test_category.png" >COM_TEST_CATEGORY</menu>
+        <submenu>
+            
+			<menu link="option=com_test_category&amp;view=__test_category7089s" view="__test_category7089s" img="components/com_test_category/assets/images/s___test_category7089s.png" alt="Test_category/__test_category7089s">COM_TEST_CATEGORY_TITLE___TEST_CATEGORY7089S</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>test_category.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_test_category.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_test_category.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_test_category.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_test_category.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="test_category"/>
+    </plugins>
+    
+</extension>
+
